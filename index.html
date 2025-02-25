@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Boost your online presence with data-driven digital marketing services from a specialized one-person agency focusing on SEO, social media, and content marketing.">
+  <title>N8iV Promotions | Data-Driven Marketing Solutions</title>
+  <style>
+    /* Base Styles */
+    :root {
+      --primary: #2563eb;
+      --secondary: #475569;
+      --accent: #3b82f6;
+      --light: #f8fafc;
+      --dark: #1e293b;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+      color: var(--dark);
+      line-height: 1.6;
+      background-color: var(--light);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    section {
+      padding: 5rem 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--primary);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      text-align: center;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: var(--accent);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-column {
+      flex-direction: column;
+    }
+
+    .items-center {
+      align-items: center;
+    }
+
+    .justify-between {
+      justify-content: space-between;
+    }
+
+    .justify-center {
+      justify-content: center;
+    }
+
+    .gap-4 {
+      gap: 1rem;
+    }
+
+    .gap-8 {
+      gap: 2rem;
+    }
+
+    .mb-4 {
+      margin-bottom: 1rem;
+    }
+
+    .mb-8 {
+      margin-bottom: 2rem;
+    }
+
+    .mt-8 {
+      margin-top: 2rem;
+    }
+
+    .p-4 {
+      padding: 1rem;
+    }
+
+    .rounded {
+      border-radius: 5px;
+    }
+
+    .shadow {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Header Styles */
+    header {
+      position: sticky;
+      top: 0;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: var(--dark);
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/api/placeholder/1200/600") center/cover no-repeat;
+      color: white;
+      padding: 8rem 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    /* Services Section */
+    .services-grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .service-card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    /* About Section */
+    .about-content {
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-image {
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .expertise-list {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .expertise-list li {
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .expertise-list li::before {
+      content: "✓";
+      color: var(--success);
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+
+    /* Portfolio Section */
+    .portfolio-grid {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .portfolio-item {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(37, 99, 235, 0.8);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .portfolio-item:hover .portfolio-overlay {
+      opacity: 1;
+    }
+
+    /* Testimonials Section */
+    .testimonial-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .testimonial {
+      background-color: white;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+
+    .testimonial-content {
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+
+    .author-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 1rem;
+    }
+
+    .author-info h4 {
+      margin-bottom: 0.25rem;
+    }
+
+    .author-info p {
+      color: var(--secondary);
+      margin-bottom: 0;
+    }
+
+    /* Call-to-Action Section */
+    .cta {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 4rem 0;
+    }
+
+    .cta h2 {
+      margin-bottom: 1rem;
+    }
+
+    .cta p {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    .cta .btn {
+      background-color: white;
+      color: var(--primary);
+    }
+
+    .cta .btn:hover {
+      background-color: var(--light);
+    }
+
+    /* Blog Section */
+    .blog-grid {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .blog-card {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .blog-content {
+      padding: 1.5rem;
+    }
+
+    .blog-meta {
+      display: flex;
+      gap: 1rem;
+      color: var(--secondary);
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Contact Section */
+    .contact-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .contact-icon {
+      color: var(--primary);
+      font-size: 1.5rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    label {
+      font-weight: 500;
+    }
+
+    input, textarea {
+      padding: 0.8rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 4rem 0 2rem;
+    }
+
+    .footer-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+
+    .footer-heading {
+      color: white;
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .social-icon:hover {
+      background-color: var(--primary);
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: #94a3b8;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .about-content,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: white;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="#" class="logo">N8iV<span>Promotions</span></a>
+      <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Boost Your Online Presence with Data-Driven Marketing</h1>
+      <p>Your one-person agency combining hands-on expertise with deep analytics to deliver measurable results for your business.</p>
+      <div class="flex justify-center gap-4">
+        <a href="#contact" class="btn">Book a Free Consultation</a>
+        <a href="#services" class="btn btn-secondary">Explore Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Message Section -->
+  <section>
+    <div class="container text-center">
+      <h2>My Unique Approach to N8iV Promotions</h2>
+      <p>I integrate SEO, social media, and content marketing into a unified strategy, backed by data analytics to maximize your ROI. As a one-person agency, I offer you direct communication, personalized service, and the expertise of a seasoned marketing professional without the overhead of a large agency.</p>
+      <div class="grid services-grid mt-8">
+        <div class="service-card">
+          <div class="service-icon">📈</div>
+          <h3>Data-Driven Strategy</h3>
+          <p>All my marketing recommendations are backed by comprehensive analytics, ensuring every dollar you spend generates measurable returns.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">👤</div>
+          <h3>Personal Attention</h3>
+          <p>Work directly with me—no account managers or junior staff. Your business receives the full focus of an experienced marketing specialist.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔄</div>
+          <h3>Integrated Approach</h3>
+          <p>I seamlessly blend SEO, social media, and content into a cohesive strategy that multiplies the effectiveness of each individual channel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" style="background-color: #f1f5f9;">
+    <div class="container">
+      <div class="text-center mb-8">
+        <h2>Specialized Services</h2>
+        <p>Tailored digital marketing solutions designed to grow your online presence and drive conversions.</p>
+      </div>
+      <div class="grid services-grid">
+        <div class="service-card">
+          <div class="service-icon">🔍</div>
+          <h3>Search Engine Optimization</h3>
+          <p>Boost your visibility in search results with comprehensive SEO strategies that target high-value keywords and build quality backlinks.</p>
+          <ul class="expertise-list">
+            <li>Technical SEO Audits</li>
+            <li>Keyword Research & Strategy</li>
+            <li>On-Page Optimization</li>
+            <li>Link Building</li>
+            <li>Local SEO</li>
+          </ul>
+          <a href="#contact" class="btn mt-8">Learn More</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📱</div>
+          <h3>Social Media Marketing</h3>
+          <p>Build a strong social presence with platform-specific strategies that engage your audience and drive traffic to your website.</p>
+          <ul class="expertise-list">
+            <li>Platform Strategy</li>
+            <li>Content Planning & Creation</li>
+            <li>Community Management</li>
+            <li>Paid Social Campaigns</li>
+            <li>Performance Analytics</li>
+          </ul>
+          <a href="#contact" class="btn mt-8">Learn More</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">✍️</div>
+          <h3>Content Marketing</h3>
+          <p>Develop high-quality content that educates your audience, establishes your authority, and converts visitors into customers.</p>
+          <ul class="expertise-list">
+            <li>Content Strategy</li>
+            <li>Blog Writing & Editing</li>
+            <li>Lead Magnets & Ebooks</li>
+            <li>Email Newsletters</li>
+            <li>SEO-Optimized Content</li>
+          </ul>
+          <a href="#contact" class="btn mt-8">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="grid about-content">
+        <div class="about-image">
+          <img src="/api/placeholder/600/400" alt="Digital marketing specialist" />
+        </div>
+        <div>
+          <h2>About Me</h2>
+          <p>With over 8 years of experience in digital marketing, I've helped businesses of all sizes grow their online presence and generate measurable results.</p>
+          <p>After working with major agencies and in-house marketing teams, I launched my one-person agency with a simple mission: provide clients with the expertise of a seasoned professional without the overhead costs and bureaucracy of larger agencies.</p>
+          <p>I combine marketing creativity with data analysis to create strategies that look good and deliver real business growth.</p>
+          <h3 class="mt-8">Credentials & Expertise</h3>
+          <ul class="expertise-list">
+            <li>Google Analytics & Google Ads Certified</li>
+            <li>HubSpot Inbound Marketing Certified</li>
+            <li>Facebook Blueprint Certified</li>
+            <li>Featured in Marketing Weekly & Digital Trends Magazine</li>
+            <li>Speaker at SMX & Content Marketing World</li>
+          </ul>
+          <a href="#contact" class="btn mt-8">Book a Free Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" style="background-color: #f1f5f9;">
+    <div class="container">
+      <div class="text-center mb-8">
+        <h2>Case Studies</h2>
+        <p>Real results for real businesses. See how my data-driven approach delivers measurable growth.</p>
+      </div>
+      <div class="grid portfolio-grid">
+        <div class="portfolio-item">
+          <img src="/api/placeholder/400/300" alt="E-commerce case study" />
+          <div class="portfolio-overlay">
+            <h3>E-commerce Revenue Growth</h3>
+            <p>Increased online sales by 137% in 6 months through SEO and conversion optimization.</p>
+            <a href="#" class="btn mt-8">View Case Study</a>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="/api/placeholder/400/300" alt="B2B lead generation case study" />
+          <div class="portfolio-overlay">
+            <h3>B2B Lead Generation</h3>
+            <p>Generated 240+ qualified leads in 3 months for a SaaS company through content marketing.</p>
+            <a href="#" class="btn mt-8">View Case Study</a>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="/api/placeholder/400/300" alt="Local business case study" />
+          <div class="portfolio-overlay">
+            <h3>Local Business Visibility</h3>
+            <p>Improved local search rankings, resulting in a 94% increase in store visits for a retail chain.</p>
+            <a href="#" class="btn mt-8">View Case Study</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section>
+    <div class="container">
+      <div class="text-center mb-8">
+        <h2>Client Success Stories</h2>
+        <p>Don't just take my word for it. Here's what my clients have to say about working with me.</p>
+      </div>
+      <div class="testimonial-container">
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <p>"Working with this agency has transformed our online presence. The level of personal attention and data-driven insights we received was exceptional. Our organic traffic increased by 215% in just 5 months, leading to a substantial boost in leads and sales."</p>
+          </div>
+          <div class="testimonial-author">
+            <img class="author-image" src="/api/placeholder/50/50" alt="Sarah Johnson" />
+            <div class="author-info">
+              <h4>Sarah Johnson</h4>
+              <p>Marketing Director, TechSolutions Inc.</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <p>"As a small business owner, I was skeptical about digital marketing. After six months of working together, our social media engagement is up 178%, and we're seeing a consistent flow of new customers from our online channels. The ROI has been incredible."</p>
+          </div>
+          <div class="testimonial-author">
+            <img class="author-image" src="/api/placeholder/50/50" alt="Michael Chen" />
+            <div class="author-info">
+              <h4>Michael Chen</h4>
+              <p>Owner, Urban Bistro</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call-to-Action Section -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Grow Your Online Presence?</h2>
+      <p>Book a free 30-minute consultation to discuss your business goals and see how my data-driven marketing approach can help you achieve them.</p>
+      <a href="#contact" class="btn">Get Your Free Marketing Audit</a>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog">
+    <div class="container">
+      <div class="text-center mb-8">
+        <h2>Marketing Insights</h2>
+        <p>Actionable tips, strategies, and insights to help you improve your digital marketing efforts.</p>
+      </div>
+      <div class="grid blog-grid">
+        <div class="blog-card">
+          <img src="/api/placeholder/400/200" alt="SEO strategies blog post" />
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span>SEO</span>
+              <span>5 min read</span>
+            </div>
+            <h3>5 SEO Strategies That Actually Work in 2025</h3>
+            <p>Discover the latest search engine optimization techniques that are driving real results in today's digital landscape.</p>
+            <a href="#" class="btn mt-8">Read More</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <img src="/api/placeholder/400/200" alt="Social media blog post" />
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span>Social Media</span>
+              <span>7 min read</span>
+            </div>
+            <h3>How to Build a Social Media Strategy That Converts</h3>
+            <p>Learn how to create a social media plan that goes beyond vanity metrics and drives measurable business outcomes.</p>
+            <a href="#" class="btn mt-8">Read More</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <img src="/api/placeholder/400/200" alt="Content marketing blog post" />
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span>Content Marketing</span>
+              <span>6 min read</span>
+            </div>
+            <h3>The Ultimate Guide to Content Marketing for Small Businesses</h3>
+            <p>Practical tips for creating and distributing content that attracts, engages, and converts your ideal customers.</p>
+            <a href="#" class="btn mt-8">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" style="background-color: #f1f5f9;">
+    <div class="container">
+      <div class="text-center mb-8">
+        <h2>Get in Touch</h2>
+        <p>Ready to discuss your marketing needs? Fill out the form below or use the contact information to reach out directly.</p>
+      </div>
+      <div class="grid contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <h3>Email</h3>
+              <p>hello@digitalgrowth.agency</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <div>
+              <h3>Phone</h3>
+              <p>(555) 123-4567</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h3>Location</h3>
+              <p>123 Digital Way<br>Marketing District<br>San Francisco, CA 94105</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">⏰</div>
+            <div>
+              <h3>Business Hours</h3>
+              <p>Monday - Friday: 9AM - 5PM PST<br>Weekend: By appointment only</p>
+            </div>
+          </div>
+        </div>
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Your email address" required />
+          </div>
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" placeholder="Your company name" />
+          </div>
+          <div class="form-group">
+            <label for="message">How can I help you?</label>
+            <textarea id="message" placeholder="Tell me about your project or question" required></textarea>
+          </div>
+          <button type="submit" class="btn">Book a Free Consultation</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="grid footer-grid">
+        <div>
+          <h3 class="footer-heading">N8iV Promotions</h3>
+          <p>Your partner for data-driven digital marketing solutions that deliver measurable results for your business.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook">f</a>
+            <a href="#" class="social-icon" aria-label="Twitter">t</a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-icon" aria-label="Instagram">ig</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer-heading
